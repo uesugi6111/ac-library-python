@@ -35,7 +35,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Type check with mypy
       run: |
-        mypy .
+        mypy . --exclude example/
     - name: Test with pytest
       run: |
         pytest
